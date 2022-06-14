@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   border: 0;
-  transition: 0.3s ease-in;
 }
 li {
   list-style-type: none;

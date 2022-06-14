@@ -1,7 +1,6 @@
 .banner-container {
   height: 100vh;
   width: 100%;
-  background-color: #999;
   text-align: center;
 }
 
@@ -21,4 +20,10 @@
 .banner-text h1 {
   font-family: "Viga", sans-serif;
   font-size: 3rem;
+}
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
 }

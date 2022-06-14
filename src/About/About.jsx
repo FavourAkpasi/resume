@@ -1,11 +1,5 @@
 import "./About.css";
-// import { FiFramer } from "react-icons/fi";
-// import {
-//   DiJavascript1,
-//   DiReact,
-//   DiNodejsSmall,
-//   DiMongodb,
-// } from "react-icons/di";
+import { motion } from "framer-motion";
 
 const About = () => {
   const Techs = [
@@ -27,7 +21,11 @@ const About = () => {
     },
     {
       name: "Framer Motion",
-      icon: "https://img.icons8.com/color/16/undefined/mongodb.png",
+      icon: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/16/undefined/external-framer-the-only-tool-you-need-to-create-interactive-designs-for-any-platform-logo-shadow-tal-revivo.png",
+    },
+    {
+      name: "Git",
+      icon: "https://img.icons8.com/ios-glyphs/16/undefined/github.png",
     },
   ];
 
@@ -35,7 +33,12 @@ const About = () => {
     <div className="about-container container">
       <span className="section-header">ABOUT</span>
       <div className="about-section">
-        <div className="about-desc">
+        <motion.div
+          className="about-desc"
+          initial={{ x: -250 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <div className="about-text">
             I'm a software engineer that enjoys creating exceptional web
             applications with simple yet beautiful digital user interfaces and
@@ -60,10 +63,16 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="about-image">
-          <img src="images/Akpasi.jpeg" alt="Akpasi Favour" />
+        <div className="about-image ">
+          <motion.img
+            animate={{ scale: [0, 1] }}
+            transition={{ duration: 0.5 }}
+            className="box-shadow-diffuse"
+            src="images/Akpasi.jpeg"
+            alt="Akpasi Favour"
+          />
         </div>
       </div>
     </div>
