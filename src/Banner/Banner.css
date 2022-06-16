@@ -7,7 +7,7 @@
 .banner-text {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   position: absolute;
   right: 0;
@@ -19,7 +19,7 @@
 
 .banner-text h1 {
   font-family: "Viga", sans-serif;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 .red {
   color: red;

@@ -27,11 +27,16 @@ const Navbar = () => {
       <div className="logo"> Favour Akpasi</div>
       <div className="nav-link-group">
         {NavLinks.map((link, index) => (
-          <div className="nav-link" key={index}>
+          <div className="nav-link" key={index} id={link}>
             {link}
           </div>
         ))}
-        <div className="resume box-shadow-diffuse">resume</div>
+        <motion.div
+          className="resume box-shadow-diffuse"
+          whileHover={{ scale: 1.1 }}
+        >
+          resume
+        </motion.div>
       </div>
     </nav>
   );
