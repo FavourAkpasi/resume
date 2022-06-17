@@ -9,13 +9,24 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
   margin: 0 auto;
 }
 
 .project {
   width: 45%;
   height: 60vh;
-  margin: 2rem 0;
+  margin: 2rem auto;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  .project-container {
+    padding: 3rem 0.5rem;
+  }
+  .project-section {
+    display: block;
+  }
+  .project {
+    width: 90%;
+  }
 }

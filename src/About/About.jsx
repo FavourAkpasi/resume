@@ -30,7 +30,7 @@ const About = () => {
   ];
 
   return (
-    <div className="about-container container">
+    <div className="about-container container" id="about">
       <motion.span
         className="section-header"
         initial={{ y: "-5rem" }}

@@ -1,5 +1,4 @@
 .about-container {
-  padding: 1rem 0;
   width: 100%;
 }
 .section-header {
@@ -70,4 +69,13 @@
 }
 .sticky + .about-container {
   padding-top: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .section-header {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
 }

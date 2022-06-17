@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <div>
-      <div className="contact-container">
+      <div className="contact-container" id="contact">
         <motion.span
           className="section-header"
           initial={{ y: "-5rem" }}
@@ -32,19 +32,29 @@ const Contact = () => {
           </motion.h4>
           <div className="contact-buttons">
             <motion.div className="button" whileHover={{ scale: 1.1 }}>
-              <TwitterIcon cursor="pointer" />
+              <a href="https://twitter.com/favourAkpasi">
+                <TwitterIcon />
+              </a>
             </motion.div>
             <motion.div className="button" whileHover={{ scale: 1.1 }}>
-              <LinkedInIcon cursor="pointer" />
+              <a href="https://www.linkedin.com/in/favour-akpasi-a9580523b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BrDj3gYVNTqKL7KBBK5wiKg%3D%3D">
+                <LinkedInIcon />
+              </a>
             </motion.div>
             <motion.div className="button" whileHover={{ scale: 1.1 }}>
-              <EmailIcon cursor="pointer" />
+              <a href="mailto:akpasifavour@gmail.com">
+                <EmailIcon />
+              </a>
             </motion.div>
             <motion.div className="button" whileHover={{ scale: 1.1 }}>
-              <GitHubIcon cursor="pointer" />
+              <a href="https://github.com/favourakpasi">
+                <GitHubIcon />
+              </a>
             </motion.div>
             <motion.div className="button" whileHover={{ scale: 1.1 }}>
-              <InstagramIcon cursor="pointer" />
+              <a href="https://instagram.com/akpasifavour">
+                <InstagramIcon />
+              </a>
             </motion.div>
           </div>
         </div>

@@ -21,7 +21,6 @@ nav {
 .nav-link {
   font-size: 1rem;
   margin: 0 2rem;
-  cursor: pointer;
   font-weight: bold;
 }
 .resume {
@@ -44,4 +43,13 @@ nav {
   top: 0;
   width: 100%;
   opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    height: 5rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
 }

@@ -4,7 +4,7 @@ import "./Banner.css";
 
 const BannerText = () => {
   return (
-    <section className="banner-container">
+    <section className="banner-container" id="home">
       <div className="banner-text container">
         <h1>Hello, I'm Favour Akpasi.</h1> <br />
         <h1>

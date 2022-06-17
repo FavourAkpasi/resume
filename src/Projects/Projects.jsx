@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <div>
-      <div className="project-container">
+      <div className="project-container" id="projects">
         <motion.span
           className="section-header"
           initial={{ y: "-5rem" }}
