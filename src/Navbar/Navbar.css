@@ -46,10 +46,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    height: 5rem;
-  }
   .logo {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }

@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={top ? "box-shadow-sharp sticky show" : "box-shadow-sharp"}
+      className={top ? "box-shadow-sharp sticky " : "box-shadow-sharp"}
       id="navbar"
     >
       <a href="#home">

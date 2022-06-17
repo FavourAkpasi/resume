@@ -78,4 +78,10 @@
   .section-header {
     font-size: clamp(2rem, 5vw, 2.5rem);
   }
+  .about-desc {
+    font-size: 1rem;
+  }
+  .about-tech {
+    gap: 0 0.5rem;
+  }
 }

@@ -34,6 +34,6 @@
     width: 80%;
   }
   .banner-text h1 {
-    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3rem);
   }
 }
