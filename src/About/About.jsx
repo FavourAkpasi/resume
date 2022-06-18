@@ -27,6 +27,10 @@ const About = () => {
       name: "Git",
       icon: "https://img.icons8.com/ios-glyphs/16/undefined/github.png",
     },
+    {
+      name: "Motoko",
+      icon: "https://img.icons8.com/fluency/16/undefined/infinity.png",
+    },
   ];
 
   return (

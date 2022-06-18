@@ -9,7 +9,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #444;
-  margin-top: 3rem;
+  padding-top: 5rem;
 }
 .section-header::after {
   content: "";
@@ -31,18 +31,18 @@
   word-spacing: 0.1rem;
   font-weight: bold;
   flex: 2;
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
-  height: 60vh;
+  padding: 1rem 1rem;
+  font-size: 1rem;
 }
 .about-text {
   margin-bottom: 1rem;
 }
 .about-tech {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-template-columns: repeat(2, minmax(150px, 200px));
   gap: 0px 1rem;
   overflow: hidden;
+  padding: 0.5rem 0.5rem;
 }
 .tech {
   display: flex;
@@ -56,7 +56,6 @@
 
 .about-image {
   display: flex;
-  justify-content: center;
   justify-content: center;
   flex: 1;
   padding: 1rem;
@@ -80,8 +79,5 @@
   }
   .about-desc {
     font-size: 1rem;
-  }
-  .about-tech {
-    gap: 0 0.5rem;
   }
 }

@@ -1,6 +1,5 @@
 .banner-container {
   height: calc(100vh - 5rem);
-  width: 100%;
   text-align: center;
 }
 
@@ -19,7 +18,11 @@
 
 .banner-text h1 {
   font-family: "Viga", sans-serif;
-  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-size: clamp(4rem, 8vw, 6.5rem);
+}
+.banner-text h3 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: bold;
 }
 .red {
   color: red;
@@ -30,10 +33,10 @@
 
 @media screen and (max-width: 768px) {
   .banner-text {
-    margin: 5rem auto 5rem auto;
-    width: 80%;
+    padding: 1rem 2rem;
+    width: 100%;
   }
   .banner-text h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: start;
   }
 }

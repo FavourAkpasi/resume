@@ -2,7 +2,7 @@ import "./SideNav.css";
 
 function SideNav({ openSideNav, setOpenSideNav }) {
   return (
-    <div className="side_nav" style={{ width: `${openSideNav ? "70%" : "0"}` }}>
+    <div className="side_nav" style={{ width: `${openSideNav ? "50%" : "0"}` }}>
       <ul>
         <li onClick={() => setOpenSideNav(!openSideNav)}>
           <a href="#about">About</a>

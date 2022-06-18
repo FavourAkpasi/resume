@@ -6,9 +6,12 @@ const BannerText = () => {
   return (
     <section className="banner-container" id="home">
       <div className="banner-text container">
-        <h1>Hello, I'm Favour Akpasi.</h1> <br />
+        <h3> Hello, I'm </h3>
+        <h1>Favour Akpasi.</h1> <br />
+        <h3> I'm a </h3>
         <h1>
-          I'm a Software{" "}
+          {" "}
+          Software{" "}
           <TextLoop mask={true}>
             <h1 className="red"> Designer_</h1>
             <h1 className="blue">Developer_</h1>
