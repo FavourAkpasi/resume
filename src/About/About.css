@@ -42,7 +42,6 @@
   grid-template-columns: repeat(2, minmax(150px, 200px));
   gap: 0px 1rem;
   overflow: hidden;
-  padding: 0.5rem 0.5rem;
 }
 .tech {
   display: flex;

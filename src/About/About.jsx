@@ -1,7 +1,31 @@
 import "./About.css";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const textVariants = {
+  visible: { x: 0, transition: { duration: 0.5, delay: 0.5 } },
+  hidden: { x: "-100rem" },
+};
+const spanVariants = {
+  visible: { y: 0, transition: { duration: 0.5, delay: 0.1 } },
+  hidden: { y: "-4rem" },
+};
+const imgVariants = {
+  visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
+  hidden: { scale: 0 },
+};
 
 const About = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   const Techs = [
     {
       name: "JavaScript (ES6+)",
@@ -34,21 +58,21 @@ const About = () => {
   ];
 
   return (
-    <div className="about-container container" id="about">
+    <div ref={ref} className="about-container container" id="about">
       <motion.span
         className="section-header"
-        initial={{ y: "-5rem" }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.3 }}
+        animate={controls}
+        initial="hidden"
+        variants={spanVariants}
       >
         ABOUT
       </motion.span>
       <div className="about-section">
         <motion.div
           className="about-desc"
-          initial={{ x: -1000 }}
-          animate={{ x: 0 }}
-          transition={{ delay: 1, duration: 0.3 }}
+          animate={controls}
+          initial="hidden"
+          variants={textVariants}
         >
           <div className="about-text">
             I'm a software engineer that enjoys creating exceptional web
@@ -78,8 +102,9 @@ const About = () => {
 
         <div className="about-image ">
           <motion.img
-            animate={{ scale: [0, 1] }}
-            transition={{ delay: 1.5, duration: 0.3 }}
+            animate={controls}
+            initial="hidden"
+            variants={imgVariants}
             className="box-shadow-diffuse"
             src="images/Akpasi.jpeg"
             alt="Akpasi Favour"
