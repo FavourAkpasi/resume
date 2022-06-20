@@ -4,8 +4,8 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const spanVariants = {
-  visible: { y: 0, transition: { duration: 0.5 } },
-  hidden: { y: "-6rem" },
+  visible: { y: 0, scale: 1, transition: { duration: 0.5 } },
+  hidden: { y: "-6rem", scale: 0 },
 };
 const imgVariants = {
   visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
@@ -15,7 +15,8 @@ const imgVariants = {
 // check if the component is visible
 const Projects = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.3 });
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");

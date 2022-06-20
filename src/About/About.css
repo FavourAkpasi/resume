@@ -1,5 +1,6 @@
 .about-container {
   width: 100%;
+  z-index: -1;
 }
 .section-header {
   letter-spacing: 0.1rem;

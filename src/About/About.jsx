@@ -8,8 +8,8 @@ const textVariants = {
   hidden: { x: "-100rem" },
 };
 const spanVariants = {
-  visible: { y: 0, transition: { duration: 0.5, delay: 0.1 } },
-  hidden: { y: "-4rem" },
+  visible: { y: 0, scale: 1, transition: { duration: 0.5, delay: 0.1 } },
+  hidden: { y: "-4rem", scale: 0 },
 };
 const imgVariants = {
   visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
@@ -18,7 +18,7 @@ const imgVariants = {
 
 const About = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (inView) {
