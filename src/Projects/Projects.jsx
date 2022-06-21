@@ -12,10 +12,15 @@ const imgVariants = {
   hidden: { scale: 0 },
 };
 
+const testVariants = {
+  visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
+  hidden: { scale: 0 },
+};
+
 // check if the component is visible
 const Projects = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [ref, inView] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (inView) {
@@ -42,7 +47,12 @@ const Projects = () => {
         >
           <div className="project"></div>
           <div className="project"></div>
-          <div className="project"></div>
+          <motion.div
+            className="project"
+            variants={testVariants}
+            initial="hidden"
+            whileInView="visible"
+          ></motion.div>
           <div className="project"></div>
         </motion.div>
       </div>

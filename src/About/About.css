@@ -10,7 +10,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #444;
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 .section-header::after {
   content: "";

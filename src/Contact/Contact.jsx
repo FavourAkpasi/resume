@@ -9,7 +9,10 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const h4Variants = {
-  visible: { x: 0, transition: { duration: 0.5, delay: 0.5 } },
+  visible: {
+    x: 0,
+    transition: { duration: 0.5, delay: 0.5, type: "spring", stiffness: 150 },
+  },
   hidden: { x: "-100rem" },
 };
 const spanVariants = {
@@ -17,7 +20,10 @@ const spanVariants = {
   hidden: { y: "-6rem", scale: 0 },
 };
 const iconVariants = {
-  visible: { y: 0, transition: { duration: 0.5, delay: 1 } },
+  visible: {
+    y: 0,
+    transition: { duration: 0.5, delay: 1, type: "spring", stiffness: 40 },
+  },
   hidden: { y: "100rem" },
 };
 
