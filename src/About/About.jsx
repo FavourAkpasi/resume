@@ -26,6 +26,10 @@ const About = () => {
     }
   }, [controls, inView]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const Techs = [
     {
       name: "JavaScript (ES6+)",
@@ -44,8 +48,12 @@ const About = () => {
       icon: "https://img.icons8.com/color/16/undefined/mongodb.png",
     },
     {
-      name: "Framer Motion",
-      icon: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/16/undefined/external-framer-the-only-tool-you-need-to-create-interactive-designs-for-any-platform-logo-shadow-tal-revivo.png",
+      name: "TypeScript",
+      icon: "https://img.icons8.com/color/16/undefined/typescript.png",
+    },
+    {
+      name: "Redux",
+      icon: "https://img.icons8.com/color/16/000000/redux.png",
     },
     {
       name: "Git",

@@ -23,6 +23,7 @@
 .banner-text h3 {
   font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: bold;
+  font-family: "Quicksand", sans-serif;
 }
 .red {
   color: red;

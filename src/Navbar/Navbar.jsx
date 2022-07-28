@@ -11,7 +11,7 @@ const Navbar = () => {
   const [top, setTop] = useState(false);
 
   function handleScroll() {
-    if (window.scrollY >= 600) {
+    if (window.scrollY >= 582) {
       setTop(true);
     } else {
       setTop(false);
@@ -61,10 +61,12 @@ const Navbar = () => {
         </div>
       ) : (
         <>
-          <MenuIcon
-            id="menu_bar"
-            onClick={() => setOpenSideNav(!openSideNav)}
-          />
+          {!openSideNav && (
+            <MenuIcon
+              id="menu_bar"
+              onClick={() => setOpenSideNav(!openSideNav)}
+            />
+          )}
           <SideNav openSideNav={openSideNav} setOpenSideNav={setOpenSideNav} />
         </>
       )}

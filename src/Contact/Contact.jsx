@@ -24,7 +24,7 @@ const iconVariants = {
     y: 0,
     transition: { duration: 0.5, delay: 1, type: "spring", stiffness: 40 },
   },
-  hidden: { y: "100rem" },
+  hidden: { y: "20rem" },
 };
 
 const Contact = () => {

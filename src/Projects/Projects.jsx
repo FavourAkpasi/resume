@@ -1,60 +1,113 @@
 import "./Projects.css";
 import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-const spanVariants = {
-  visible: { y: 0, scale: 1, transition: { duration: 0.5 } },
-  hidden: { y: "-6rem", scale: 0 },
+import Language from "@mui/icons-material/Language";
+import GitHub from "@mui/icons-material/GitHub";
+
+const projects = [
+  {
+    name: "INNICROSS Website",
+    img: "images/innicross.png",
+    desc: "A Website for INNICROSS",
+    techs: ["TypeScript", "React"],
+    github: "https://github.com/nuelobeto/innicross",
+    url: "https://innicross.com/",
+  },
+  {
+    name: "OYEKES E-Commerce App",
+    img: "images/oyekes.png",
+    desc: "An E-Commerce Web App built for OYEKES Hair and Fabrics",
+    techs: ["MongoDB", "React", "Node", "Express"],
+    github: "https://github.com/favourakpasi/oyekes-MERN",
+    url: "http://oyekes.herokuapp.com",
+  },
+  {
+    name: "TODO List",
+    img: "images/ToDo-List-App.png",
+    desc: "A Simple MERN Stack TODO List app with Authentication",
+    techs: ["MongoDB", "React", "Node", "Express"],
+    github: "https://github.com/FavourAkpasi/ToDo-List-MERN",
+    url: "http://tdl-mern.herokuapp.com/",
+  },
+  {
+    name: "COLEFIT E-Commerce App",
+    img: "images/Colefit.png",
+    desc: "An E-Commerce Web App built for Exquisite Cole Fit Designs",
+    techs: ["TypeScript", "React", "Node", "Express", "MongoDB"],
+    github: "https://github.com/FavourAkpasi/cole-fit",
+    url: "http://colefitsample.netlify.app/",
+  },
+  {
+    name: "Simon Game",
+    img: "images/Simon-Game.png",
+    desc: "Simon Game Built with JavaScript DOM Manipulation",
+    techs: ["TypeScript", "React", "Node", "Express", "MongoDB"],
+    github: "https://github.com/FavourAkpasi/A-Simon-Game",
+    url: "http://Favour-Simon-Game.netlify.app",
+  },
+];
+
+const titleVariants = {
+  visible: { y: 0, opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
+  hidden: { y: -25, opacity: 0 },
 };
 const imgVariants = {
-  visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
-  hidden: { scale: 0 },
+  visible: { scale: 1, opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
+  hidden: { scale: 0, opacity: 0 },
 };
 
-const testVariants = {
-  visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
-  hidden: { scale: 0 },
-};
-
-// check if the component is visible
 const Projects = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
-
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
-      <div ref={ref} className="project-container" id="projects">
+      <div className="project-container" id="projects">
         <motion.span
           className="section-header"
           initial="hidden"
-          animate={controls}
-          variants={spanVariants}
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={titleVariants}
         >
           PROJECTS
         </motion.span>
-        <motion.div
-          className="project-section container"
-          initial="hidden"
-          animate={controls}
-          variants={imgVariants}
-        >
-          <div className="project"></div>
-          <div className="project"></div>
-          <motion.div
-            className="project"
-            variants={testVariants}
-            initial="hidden"
-            whileInView="visible"
-          ></motion.div>
-          <div className="project"></div>
-        </motion.div>
+
+        <div className="project-section container">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="project"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={imgVariants}
+            >
+              <div className="project-image">
+                <img src={project.img} alt={project.name} />
+              </div>
+              <div className="project-content">
+                <h3 className="project-title">{project.name}</h3>
+                <p className="project-description">{project.desc}</p>
+                <ul className="tags">
+                  {project.techs.map((tech, index) => (
+                    <li key={index}>{tech}</li>
+                  ))}
+                </ul>
+                <div className="links">
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    <GitHub />
+                  </a>
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    <Language />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

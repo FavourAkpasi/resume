@@ -1,7 +1,9 @@
 .contact-container {
   width: 100%;
   height: 100vh;
+  padding: 5rem 0;
   background-color: #eee;
+  font-family: "Quicksand", sans-serif;
 }
 .contact-desc {
   margin: 5rem auto;

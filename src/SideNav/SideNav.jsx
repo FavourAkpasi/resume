@@ -1,8 +1,9 @@
 import "./SideNav.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 function SideNav({ openSideNav, setOpenSideNav }) {
   return (
-    <div className="side_nav" style={{ width: `${openSideNav ? "50%" : "0"}` }}>
+    <div className="side_nav" style={{ width: `${openSideNav ? "60%" : "0"}` }}>
       <ul>
         <li onClick={() => setOpenSideNav(!openSideNav)}>
           <a href="#about">About</a>
@@ -24,9 +25,11 @@ function SideNav({ openSideNav, setOpenSideNav }) {
           </a>
         </li>
       </ul>
-      <button id="close_btn" onClick={() => setOpenSideNav(!openSideNav)}>
-        &times;
-      </button>
+      {openSideNav && (
+        <button id="close_btn" onClick={() => setOpenSideNav(!openSideNav)}>
+          <CloseIcon />
+        </button>
+      )}
     </div>
   );
 }
