@@ -50,7 +50,11 @@ const Navbar = () => {
               <a href={`#${link.toLowerCase()}`}> {link}</a>
             </div>
           ))}
-          <a href="https://drive.google.com/file/d/1PVMYmXK-P6L3SDez8T9j5dHXkb70PbFm/view?usp=sharing">
+          <a
+            href="https://drive.google.com/file/d/1_beR3HAohXUph47bsWGRxdEKDgpm6bgN/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             <motion.div
               className="resume box-shadow-diffuse"
               whileHover={{ scale: 1.1 }}
