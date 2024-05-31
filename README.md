@@ -1,6 +1,6 @@
 Favour Akpasi's Portfolio
 
-Hi there i'm Favour this is portfolio site [insert link here].
+Hi there i'm Favour this is portfolio site favourakpasi.com.
 
 It was built to help me connect with potential employers and clients and get them to know me better It contains a link to my resume and other links through which i can be contacted.
 
